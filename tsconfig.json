@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "baseUrl": ".",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "jsx": "preserve",
+    "sourceMap": true,
+    "lib": ["esnext", "dom"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": false,
+    "noImplicitReturns": false,
+    "noUnusedParameters": true,
+    "isolatedModules": false,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": false,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "downlevelIteration": true,
+    "strict": true,
+    "removeComments": true,
+    "types": ["vite/client", "naive-ui/volar"],
+    "paths": {
+      "@/*": ["src/*"],
+      "@config/*": ["config/*"],
+      "~/*": ["./*"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "config/**/*.ts",
+    "typings/**/*.ts",
+    "typings/**/*.d.ts",
+    "vite.config.ts"
+  ],
+  "exclude": ["node_modules", "dist", "**/*.js"]
+}
