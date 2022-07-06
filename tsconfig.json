@@ -27,7 +27,7 @@
     "downlevelIteration": true,
     "strict": true,
     "removeComments": true,
-    "types": ["vite/client", "naive-ui/volar"],
+    "types": ["vite/client"],
     "paths": {
       "@/*": ["src/*"],
       "@config/*": ["config/*"],

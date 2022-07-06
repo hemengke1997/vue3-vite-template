@@ -1,6 +1,5 @@
 import type { ErrorMessageMode } from './axios.d'
 import { useI18n } from '@/hooks/useI18n'
-import { useMessage } from 'naive-ui'
 
 const { t } = useI18n()
 
@@ -21,7 +20,7 @@ export function checkStatus(
   msg: string | undefined,
   errorMessageMode: ErrorMessageMode = 'message',
 ): void {
-  const message = useMessage()
+  // const message = useMessage()
   let errMessage = ''
 
   errMessage = msg || (status && codeMessage[status])
@@ -35,7 +34,7 @@ export function checkStatus(
       // });
     } else if (errorMessageMode === 'message') {
       // 使用message报错
-      message.error(errMessage)
+      // message.error(errMessage)
     }
   }
 }

@@ -1,25 +1,18 @@
 <script lang="ts" setup>
-  import { NConfigProvider } from 'naive-ui'
-  import NaiveProviderVue from './components/NaiveProvider.vue'
-  import { getNaiveThemeOverrides } from '@/settings/theme'
   import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <NConfigProvider :theme-overrides="getNaiveThemeOverrides()">
-    <NaiveProviderVue>
-      <RouterView>
-        <template #default="{ Component, route }">
-          <Transition name="fade-slide" mode="out-in" appear>
-            <KeepAlive v-if="route.meta.keepAlive">
-              <component :is="Component" :key="route.path" />
-            </KeepAlive>
-            <component :is="Component" v-else :key="route.path" />
-          </Transition>
-        </template>
-      </RouterView>
-    </NaiveProviderVue>
-  </NConfigProvider>
+  <RouterView>
+    <template #default="{ Component, route }">
+      <Transition name="fade-slide" mode="out-in" appear>
+        <KeepAlive v-if="route.meta.keepAlive">
+          <component :is="Component" :key="route.path" />
+        </KeepAlive>
+        <component :is="Component" v-else :key="route.path" />
+      </Transition>
+    </template>
+  </RouterView>
 </template>
 
 <style scoped>

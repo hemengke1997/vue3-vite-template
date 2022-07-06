@@ -11,11 +11,3 @@ declare global {
 }
 
 declare type Recordable<T = any> = Record<string, T>
-
-interface Window {
-  // naive-ui
-  $loadingBar: import('naive-ui').LoadingBarApi
-  $dialog: import('naive-ui').DialogApi
-  $message: import('naive-ui').MessageApi
-  $notification: import('naive-ui').NotificationApi
-}

@@ -10,13 +10,17 @@ declare module 'vue-router' {
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/',
+    redirect: '/a',
   },
-
+  {
+    path: '/a',
+    component: () => import('@/pages/a/index.vue'),
+  },
   {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
-    component: () => import('@/pages/SignIn/index.vue'),
+    // TODO
+    component: () => import('@/pages/a/index.vue'),
   },
 ]
 

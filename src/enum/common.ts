@@ -1,9 +1,3 @@
-/** 缓存的key */
-export enum EnumStorageKey {
-  /** 主题颜色 */
-  'theme-color' = '__THEME_COLOR__',
-}
-
 /** 数据类型 */
 export enum EnumDataType {
   number = '[object Number]',

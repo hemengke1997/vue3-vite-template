@@ -46,7 +46,7 @@ async function main(): Promise<void> {
     })
     targetVersion = version
 
-    if (!semver.valid(targetVersion) && semver.lt(pkg.version, targetVersion)) {
+    if (!semver.valid(targetVersion) && semver.lt(pkg.version, targetVersion!)) {
       console.log(colors.red('Please follow NPM semver'), colors.underline('https://semver.org/lang/zh-CN/'))
       throw new Error(`invalid target version: ${targetVersion}`)
     }
@@ -54,7 +54,7 @@ async function main(): Promise<void> {
     tag = `v${targetVersion}`
 
     step('\nUpdating package version...')
-    updateVersion(path.resolve(__dirname, '../package.json'), targetVersion)
+    updateVersion(path.resolve(__dirname, '../package.json'), targetVersion!)
 
     // generate changelog
     step('\nGenerating changelog...')
